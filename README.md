@@ -93,7 +93,7 @@ Run the following commands:
 - Step 3: Open Google Colab and the notebook named ColabNotebookRun.ipynb
 - Step 4: Mount Drive onto colab notebook.
 - Step 5: Download the Kitti Data set from [here](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) and upload it into GDrive in the following format:
-
+```
 OpenPCDet
 ├── data
 │   ├── kitti
@@ -104,20 +104,54 @@ OpenPCDet
 │   │   │   ├──calib & velodyne & image_2
 ├── pcdet
 ├── tools
+```
 
-- Step 6 
+- Step 6: Generate the data infos by running the following command:
+```
+python -m pcdet.datasets.kitti.kitti_dataset create_kitti_infos tools/cfgs/dataset_configs/kitti_dataset.yaml
+```
+- Step 7: Download the following path files for our trained model to see the test results.
+- Step 8: Follow the steps in the colab notebook and run the commands mentioned.
+```
+%cd drive/MyDrive/OpenPCDetTrain/OpenPCDet/
+```
+```
+!pip install -r requirements.txt
+```
+```
+!pip install spconv-cu111
+```
+```
+!python setup.py develop
+```
+```
+%cd tools/
+```
+```
+%load_ext tensorboard
+```
+```
+%tensorboard --logdir logs
+```
+```
+!python train.py --cfg_file cfgs/kitti_models/voxel_rcnn_cpc.yaml --epochs 20 --batch_size 8
+```
+```
+!python test.py --cfg_file cfgs/kitti_models/voxel_rcnn_cpc.yaml --batch_size 8 --eval_all
+```
 
-**Bold** and _Italic_ and `Code` text
+- Step 9: Please note that the 3D image display does not work in Colab and has to be done on the local system.
+ Download the provided pretrained models from the [link](https://drive.google.com/drive/folders/14sUfunEwXeD0WIjfeKvoSEJYs87q1xWu?usp=sharing)
 
-[Link](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) and ![Image](src)
+```
+pip install mayavi
+```
+```
+python demo.py cfgs/kitti_models/voxel_rcnn_cpc.yaml \
+    --ckpt  VoxelRCNNAll20ep.pth \
+    --data_path /{dircetory for training/testing data bin file ex. 000008.bin}
+```
 
+### Key Takeaways From The Project
+In this project we learnt how powerful deep learning architectures are compared to ML model for 3D obstacle detection. Our developed architecture performed at par with the original model but could detect even more classes accuratetly. We successfully learnt the differences in two main models (Voxel-RCNN and SECOND) to create a new model which allows us for robust detection of pedestrians and cyclists. Thank you so much for taking the time to read about our project!
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jashmehta20/Voxel-RCNN-OpenPCDet/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
