@@ -50,6 +50,32 @@ We tested our model that was trained for 20 epochs on google colab pro. We notic
 
 ![plot](/Assets/image12.jpg)
 
+The training loss plot generated: 
+
+![loss](/Assets/image2.jpg)
+
+### Visualization
+The first scene tested was: 
+
+![scene1](/Assets/image10.jpg)
+
+Output:
+
+![ans](/Assets/image1.jpg)
+
+Voxel-RCNN vs Updated Voxel-RCNN
+
+The second scene tested was: 
+
+![scene2](/Assets/image5.jpg)
+
+Output:
+
+![ans2](/Assets/image9.jpg)
+
+Voxel-RCNN vs Updated Voxel-RCNN
+
+
 ```markdown
 Syntax highlighted code block
 
