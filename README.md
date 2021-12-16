@@ -50,7 +50,7 @@ We tested our model that was trained for 20 epochs on google colab pro. We notic
 
 ![plot](/Assets/image12.jpg)
 
-The training loss plot generated: 
+The training loss evaluation over no. of epochs: 
 
 ![loss](/Assets/image2.jpg)
 
@@ -75,23 +75,28 @@ Output:
 
 Voxel-RCNN vs Updated Voxel-RCNN
 
+### Instruction To Run Code
 
-```markdown
-Syntax highlighted code block
+**Requirements** 
+- Linux (tested on Ubuntu 18.04/20.04
+- Python 3.6+
+- PyTorch 1.1 or higher (tested on PyTorch 1.1, 1,3, 1,5~1.10)
+- CUDA 9.0 or higher (PyTorch 1.3+ needs CUDA 9.2+)
+- spconv v1.0 (commit 8da6f96) or spconv v1.2 or spconv v2.x
 
-# Header 1
-## Header 2
-### Header 3
+Run the following commands:
+- Step 1
 ```
-- Bulleted
-- List
-
-1. Numbered
-2. List
+  git clone https://github.com/jashmehta20/Voxel-RCNN-OpenPCDet
+```
+- Step 2: Zip the cloned folder and add to drive to run on Google Colab.
+- Step 3: Open Google Colab and the notebook named ColabNotebookRun.ipynb
+- Step 4: Mount Drive onto colab notebook.
+- Step 5: Download the Kitti Data set and upload it into GDrive in the following format from [here](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) 
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+[Link](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) and ![Image](src)
 
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
