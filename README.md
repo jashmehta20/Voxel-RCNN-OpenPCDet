@@ -8,6 +8,8 @@ In today's rapidly automated world, state of the art 2D object detection algorit
 ### Dataset 
 For testing the perfromace of our improved architecture, we used the standard KITTI dataset which is used as a baseline for all 3D object detection algorithms. This dataset contains 7500 training and 7500 testing instances of RGB camera images and Velodyne LIDAR scans for numerous driving conditions. These instances have ground truth 3D bounding boxes for pedestrians, cyclists and car that we use for training our model.
 
+![KITTI](Voxel-RCNN-OpenPCDet/Assets/image1.jpg?raw=true "Title")
+
 The dataset is further split into 3 main categories based on the occulusion and trucation of the objects. Those categories are:
 - EASY: Min. bounding box height: 40 Px, Max. occlusion level: Fully visible, Max. truncation: 15 %
 - MODERATE: Min. bounding box height: 25 Px, Max. occlusion level: Partly occluded, Max. truncation: 30 %
