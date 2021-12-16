@@ -13,6 +13,9 @@ The dataset is further split into 3 main categories based on the occulusion and 
 - MODERATE: Min. bounding box height: 25 Px, Max. occlusion level: Partly occluded, Max. truncation: 30 %
 - HARD: Min. bounding box height: 25 Px, Max. occlusion level: Difficult to see, Max. truncation: 50 %
 
+### OpenPCDet
+We used an open source 3D object detection package which is modular in natu
+
 ```markdown
 Syntax highlighted code block
 
