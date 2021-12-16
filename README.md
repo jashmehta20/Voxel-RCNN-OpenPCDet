@@ -37,13 +37,18 @@ We improved upon the original architeture which only detected cars compared to o
 3. No. of upsample filter changed from 128,128 to 256,256.
 4. Added anchor generator config for pedestrian and cyclist based on SECOND model.
 
+### Results
+We tested our model that was trained for 20 epochs on google colab pro. We noticed a slight degradation of ~2% in terms of the detection of cars but we gained good accuracy of detecting pedestrians and cyclists. Our model performs at 89% for EASY data, 85% for MODERATE data and 79% for HARD data. The following plots shows accuracy over the number of epochs: 
+
+ˇ
+
 ```markdown
 Syntax highlighted code block
 
 # Header 1
 ## Header 2
 ### Header 3
-
+```
 - Bulleted
 - List
 
@@ -51,7 +56,7 @@ Syntax highlighted code block
 2. List
 
 **Bold** and _Italic_ and `Code` text
-```
+
 [Link](url) and ![Image](src)
 
 
