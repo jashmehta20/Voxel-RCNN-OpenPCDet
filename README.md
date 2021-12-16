@@ -92,7 +92,20 @@ Run the following commands:
 - Step 2: Zip the cloned folder and add to drive to run on Google Colab.
 - Step 3: Open Google Colab and the notebook named ColabNotebookRun.ipynb
 - Step 4: Mount Drive onto colab notebook.
-- Step 5: Download the Kitti Data set and upload it into GDrive in the following format from [here](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) 
+- Step 5: Download the Kitti Data set from [here](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) and upload it into GDrive in the following format:
+
+OpenPCDet
+├── data
+│   ├── kitti
+│   │   │── ImageSets
+│   │   │── training
+│   │   │   ├──calib & velodyne & label_2 & image_2 & (optional: planes) & (optional: depth_2)
+│   │   │── testing
+│   │   │   ├──calib & velodyne & image_2
+├── pcdet
+├── tools
+
+- Step 6 
 
 **Bold** and _Italic_ and `Code` text
 
