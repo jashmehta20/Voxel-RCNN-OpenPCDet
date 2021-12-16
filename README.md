@@ -1,11 +1,9 @@
-## Voxel-RCNN
-You can use the [editor on GitHub](https://github.com/jashmehta20/Voxel-RCNN-OpenPCDet/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## Voxel-RCNN-OpenPCDet
+Final course project for CS-539 Machine Learning Fall '21
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Introduction and Motive 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+In today's rapidly automated world, state of the art 2D object detection algorithms have become very robust yeilding high accuracy with great precision. In autonomous driving scenarios, 2D detection is not sufficient as it lacks depth information of the corresponding detections. This data is imperative for making sense of the environment for localization and obstacle avoidance. 
 
 ```markdown
 Syntax highlighted code block
