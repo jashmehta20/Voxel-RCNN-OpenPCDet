@@ -21,9 +21,14 @@ We used an open source library for 3D object detection package which has multipl
 - Google Colab Pro*
 - Mayavi - Point cloud visualization
 - TensorBoardX
-- SpConv: Spatially Saprce Convolution Library 
+- SpConv: Spatially Sparce Convolution Library 
 
 ### Original Voxel-RCNN Archtecture
+Given the point cloud data, we perform the following steps in this architecture. 
+1. The point clouds are first divided into regular voxels and fed into the 3D backbone network for feature extraction. 
+2. Then, the 3D feature volumes are converted into Birds Eye View (BEV) representation, on which they applied the 2D backbone and Region Proposal Network for region proposal generation. 
+3. Subsequently,  Voxel Region of Interest (RoI) pooling directly extracts RoI features from the 3D feature volumes. 
+4. Finally, the RoI features are exploited in the detect head for further box refinement.
 
 
 ```markdown
