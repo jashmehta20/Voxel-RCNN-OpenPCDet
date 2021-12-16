@@ -8,9 +8,7 @@ In today's rapidly automated world, state of the art 2D object detection algorit
 ### Dataset 
 For testing the perfromace of our improved architecture, we used the standard KITTI dataset which is used as a baseline for all 3D object detection algorithms. This dataset contains 7500 training and 7500 testing instances of RGB camera images and Velodyne LIDAR scans for numerous driving conditions. These instances have ground truth 3D bounding boxes for pedestrians, cyclists and car that we use for training our model.
 
-<!-- ![KITTI](Voxel-RCNN-OpenPCDet/Assets/image1.jpg?raw=true "Title") -->
-<!-- <img src="/Assets/image1.jpg"> -->
-![image](/Assets/image1.jpg)
+![kitti](/Assets/image1.jpg)
 
 The dataset is further split into 3 main categories based on the occulusion and trucation of the objects. Those categories are:
 - EASY: Min. bounding box height: 40 Px, Max. occlusion level: Fully visible, Max. truncation: 15 %
@@ -19,6 +17,8 @@ The dataset is further split into 3 main categories based on the occulusion and 
 
 ### OpenPCDet
 We used an open source library for 3D object detection package which has multiple state of the art 3D object detection models. It is also the official code release for PV-RCNN, PointRCNN and VoxelRCNN arhcitectures. All these models differ slightly from one another and share multiple similar components. This library runs the particular modules in a plug and play type of system to run each of the archtectures and shows in the image below:
+
+![openpcarchi](/Assets/image6.jpg)
 
 ### Other Libraries Used
 - Pytorch
