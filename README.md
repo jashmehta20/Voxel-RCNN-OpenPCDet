@@ -8,7 +8,11 @@ In today's rapidly automated world, state of the art 2D object detection algorit
 ### Dataset 
 For testing the perfromace of our improved architecture, we used the standard KITTI dataset which is used as a baseline for all 3D object detection algorithms. This dataset contains 7500 training and 7500 testing instances of RGB camera images and Velodyne LIDAR scans for numerous driving conditions. These instances have ground truth 3D bounding boxes for pedestrians, cyclists and car that we use for training our model.
 
-The dataset is further split into 3 main categories based on the occulusion and trucation of the objects. Those categories are EASY, MEDIUM and HARD where EASY means that the object is clearly visible and HARD means that the object is mostly convered by a wall, pillar etc. 
+The dataset is further split into 3 main categories based on the occulusion and trucation of the objects. Those categories are:
+-EASY, 
+-MEDIUM
+-HARD 
+where EASY means that the object is clearly visible and HARD means that the object is mostly convered by a wall, pillar etc. 
 
 ```markdown
 Syntax highlighted code block
