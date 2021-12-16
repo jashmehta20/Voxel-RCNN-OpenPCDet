@@ -23,13 +23,19 @@ We used an open source library for 3D object detection package which has multipl
 - TensorBoardX
 - SpConv: Spatially Sparce Convolution Library 
 
-### Original Voxel-RCNN Archtecture
+### Original Voxel-RCNN Architecture (Only Detects CARS)
 Given the point cloud data, we perform the following steps in this architecture. 
 1. The point clouds are first divided into regular voxels and fed into the 3D backbone network for feature extraction. 
 2. Then, the 3D feature volumes are converted into Birds Eye View (BEV) representation, on which they applied the 2D backbone and Region Proposal Network for region proposal generation. 
 3. Subsequently,  Voxel Region of Interest (RoI) pooling directly extracts RoI features from the 3D feature volumes. 
 4. Finally, the RoI features are exploited in the detect head for further box refinement.
 
+### Updated Voxel-RCNN, Our Model (Detects CARS, PEDESTRIANS and CYCLISTS) 
+We improved upon the original architeture which only detected cars compared to ours detecting pedestrians and cyclists as well. We took inspriation from the SECOND architecture to extend the capabilities of the original model. The main changes are: 
+1. In data preparation filter by minimum points by 5 for pedestrian and cyclist.
+2. 2D backbone: Increased number of filters to (128,256).
+3. No. of upsample filter changed from 128,128 to 256,256.
+4. Added anchor generator config for pedestrian and cyclist based on SECOND model.
 
 ```markdown
 Syntax highlighted code block
