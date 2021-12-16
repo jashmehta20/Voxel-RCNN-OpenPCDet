@@ -16,6 +16,14 @@ The dataset is further split into 3 main categories based on the occulusion and 
 ### OpenPCDet
 We used an open source library for 3D object detection package which has multiple state of the art 3D object detection models. It is also the official code release for PV-RCNN, PointRCNN and VoxelRCNN arhcitectures. All these models differ slightly from one another and share multiple similar components. This library runs the particular modules in a plug and play type of system to run each of the archtectures and shows in the image below:
 
+### Other Libraries Used
+- Pytorch
+- Google Colab Pro*
+- Mayavi - Point cloud visualization
+- TensorBoardX
+- SpConv: Spatially Saprce Convolution Library 
+
+### Original Voxel-RCNN Archtecture
 
 
 ```markdown
@@ -32,7 +40,7 @@ Syntax highlighted code block
 2. List
 
 **Bold** and _Italic_ and `Code` text
-'''
+```
 [Link](url) and ![Image](src)
 
 
