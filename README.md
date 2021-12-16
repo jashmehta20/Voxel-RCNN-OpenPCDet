@@ -8,7 +8,7 @@ In today's rapidly automated world, state of the art 2D object detection algorit
 ### Dataset 
 For testing the perfromace of our improved architecture, we used the standard KITTI dataset which is used as a baseline for all 3D object detection algorithms. This dataset contains 7500 training and 7500 testing instances of RGB camera images and Velodyne LIDAR scans for numerous driving conditions. These instances have ground truth 3D bounding boxes for pedestrians, cyclists and car that we use for training our model.
 
-![kitti](/Assets/image1.jpg)
+![kitti](/Assets/kitti.jpg)
 
 The dataset is further split into 3 main categories based on the occulusion and trucation of the objects. Those categories are:
 - EASY: Min. bounding box height: 40 Px, Max. occlusion level: Fully visible, Max. truncation: 15 %
@@ -34,6 +34,8 @@ Given the point cloud data, we perform the following steps in this architecture.
 3. Subsequently,  Voxel Region of Interest (RoI) pooling directly extracts RoI features from the 3D feature volumes. 
 4. Finally, the RoI features are exploited in the detect head for further box refinement.
 
+![vrcnn](/Assets/image4.jpg)
+
 ### Updated Voxel-RCNN, Our Model (Detects CARS, PEDESTRIANS and CYCLISTS) 
 We improved upon the original architeture which only detected cars compared to ours detecting pedestrians and cyclists as well. We took inspriation from the SECOND architecture to extend the capabilities of the original model. The main changes are: 
 1. In data preparation filter by minimum points by 5 for pedestrian and cyclist.
@@ -41,10 +43,12 @@ We improved upon the original architeture which only detected cars compared to o
 3. No. of upsample filter changed from 128,128 to 256,256.
 4. Added anchor generator config for pedestrian and cyclist based on SECOND model.
 
+![update](/Assets/image13.jpg)
+
 ### Results
 We tested our model that was trained for 20 epochs on google colab pro. We noticed a slight degradation of ~2% in terms of the detection of cars but we gained good accuracy of detecting pedestrians and cyclists. Our model performs at 89% for EASY data, 85% for MODERATE data and 79% for HARD data. The following plots shows accuracy over the number of epochs: 
 
-ˇ
+![plot](/Assets/image12.jpg)
 
 ```markdown
 Syntax highlighted code block
