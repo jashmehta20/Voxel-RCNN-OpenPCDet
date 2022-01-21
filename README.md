@@ -153,5 +153,5 @@ python demo.py cfgs/kitti_models/voxel_rcnn_cpc.yaml \
 ```
 
 ### Key Takeaways From The Project
-In this project we learnt how powerful deep learning architectures are compared to ML model for 3D obstacle detection. Our developed architecture performed at par with the original model but could detect even more classes accuratetly. We successfully learnt the differences in two main models (Voxel-RCNN and SECOND) to create a new model which allows us for robust detection of pedestrians and cyclists. Thank you so much for taking the time to read about our project!
+In this project we learnt how powerful deep learning architectures are compared to ML model for 3D obstacle detection. Our developed architecture performed in par with the original model but could detect even more classes accuratetly. We successfully learnt the differences in two main models (Voxel-RCNN and SECOND) to create a new model which allows us for robust detection of pedestrians and cyclists. Thank you so much for taking the time to read about our project!
 
